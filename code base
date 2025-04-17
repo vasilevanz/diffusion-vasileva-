@@ -1,0 +1,47 @@
+// основа для полного кода.
+
+
+let slider;
+let slider2;
+let slider3;
+
+let R1=0.5;
+let a = 0;
+//let b = 0;
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  slider = createSlider();
+  slider2 = createSlider();
+  slider3 = createSlider();
+}
+
+function draw() {
+ // background(0);
+  translate (width/2, height/2);
+  let amp = slider.value();
+  let amp2 = slider2.value();//  lj,fdkztn ckfq;th lkz edtkbxtybzb evtymtiybz fvgkbnels 
+  let amp3 = slider3.value();
+  
+  for (let i = -300; i<= 300; i+=80) {
+    for (let j = -300; j<= 300; j+=80) {
+      for (let k = 0; k<=1; k+=0.5) {
+        
+      
+      push()
+      translate(i,j)
+    
+  fill(130,60,190); // цветт круга
+    stroke(10, 10, 20); //контур объекта 
+    strokeWeight(1.5); //толщина круга
+      ellipse(R1*sin(a*amp3)*amp, R1*cos(a*amp3)*amp2, 25); // 5 это амплитуда 
+      pop()
+    }
+  }
+    } 
+  a=a+0.1;
+
+}
+
+
+ // b=b+0.01;
+ // c=c+0.05; R1*sin(a*amp3)*amp
