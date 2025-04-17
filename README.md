@@ -1,2 +1,2 @@
-# diffusion-vasileva-
+# Brownian motion-vasileva-
 diffusion regulated with temperature  
